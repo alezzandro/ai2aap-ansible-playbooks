@@ -1,0 +1,98 @@
+---
+roles:
+  - name: buluma.bootstrap
+  - name: buluma.buildtools
+  - name: buluma.epel
+  - name: buluma.openssl
+  - name: buluma.python_pip
+  - name: buluma.selinux
+  - name: buluma.apache
+  - name: buluma.mysql
+collections: 
+  - name: community.crypto
+  - name: community.general
+  - name: community.mysql
+  - name: amazon.aws
+    version: 6.4.0
+  - name: ansible.controller
+    version: 4.5.8
+  - name: ansible.netcommon
+    version: 6.0.0
+  - name: ansible.network
+    version: 3.0.0
+  - name: ansible.posix
+    version: 1.5.4
+  - name: ansible.scm
+    version: 2.0.0
+  - name: ansible.security
+    version: 2.0.0
+  - name: ansible.snmp
+    version: 2.0.0
+  - name: ansible.utils
+    version: 3.0.0
+  - name: ansible.windows
+    version: 1.14.0
+  - name: ansible.yang
+    version: 2.0.0
+  - name: arista.eos
+    version: 7.0.0
+  - name: cisco.asa
+    version: 5.0.0
+  - name: cisco.ios
+    version: 6.1.0
+  - name: cisco.iosxr
+    version: 7.0.0
+  - name: cisco.nxos
+    version: 6.0.0
+  - name: cloud.common
+    version: 2.1.2
+  - name: cloud.terraform
+    version: 1.1.1
+  - name: frr.frr
+    version: 2.0.2
+  - name: ibm.qradar
+    version: 3.0.0
+  - name: junipernetworks.junos
+    version: 6.0.0
+  - name: microsoft.ad
+    version: 1.1.0
+  - name: redhat.amq_broker
+    version: 1.3.0
+  - name: redhat.data_grid
+    version: 1.3.1
+  - name: redhat.eap
+    version: 1.3.1
+  - name: redhat.insights
+    version: 1.2.2
+  - name: redhat.jws
+    version: 2.0.0
+  - name: redhat.redhat_csp_download
+    version: 1.2.2
+  - name: redhat.rhbk
+    version: 2.2.2
+  - name: redhat.rhel_idm
+    version: 1.10.0
+  - name: redhat.rhel_system_roles
+    version: 1.21.1
+  - name: redhat.runtimes_common
+    version: 1.1.3
+  - name: redhat.sap_install
+    version: 1.2.1
+  - name: redhat.satellite
+    version: 3.10.0
+  - name: redhat.satellite_operations
+    version: 1.3.0
+  - name: redhat.sso
+    version: 1.3.0
+  - name: sap.sap_operations
+    version: 1.0.4
+  - name: servicenow.itsm
+    version: 2.1.0
+  - name: splunk.es
+    version: 3.0.0
+  - name: trendmicro.deepsec
+    version: 3.0.0
+  - name: vmware.vmware_rest
+    version: 2.3.1
+  - name: vyos.vyos
+    version: 4.0.2
