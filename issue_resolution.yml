@@ -1,0 +1,12 @@
+---
+- name: Solving Webserver Issue
+  ansible.builtin.import_playbook: ./apache.yml
+  when: category == "Webserver"
+
+- name: Solving Database Issue
+  ansible.builtin.import_playbook: ./database.yml
+  when: category == "Database"
+
+- name: Solving Filesystem Issue
+  ansible.builtin.import_playbook: ./fs-check-remediation/setup.yml
+  when: category == "Filesystem"
