@@ -1,11 +1,6 @@
 ---
-- name: Setup and Remediate the machines with the required filesystem
-  hosts: all
-  become: true
+- name: Configure the filesystem
+  ansible.builtin.import_playbook: ./fs-check-remediation/setup.yml
 
-  tasks:
-    - name: Configure the filesystem
-      ansible.builtin.import_playbook: ./fs-check-remediation/setup.yml
-
-    - name: Remediate the filesystem if needed
-      ansible.builtin.import_playbook: ./fs-check-remediation/fs_remediate.yml
+- name: Remediate the filesystem if needed
+  ansible.builtin.import_playbook: ./fs-check-remediation/fs_remediate.yml
