@@ -17,7 +17,7 @@
       register: memory_result
 
     - name: Gathering Network information
-      ansible.builtin.shell: "ip -a"
+      ansible.builtin.shell: "ip a"
       register: network_result
 
     - name: Gathering Mount information
