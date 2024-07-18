@@ -53,7 +53,7 @@
     when: demo_presence.rc == 1
 
   - name: Ensure the path is mounted
-    ansible.builtin.mount:
+    ansible.posix.mount:
       path: /mnt/demo
       src: /dev/mapper/demovg-demolv
       fstype: xfs
