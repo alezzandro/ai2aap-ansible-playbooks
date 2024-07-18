@@ -1,7 +1,7 @@
 ---
 - name: Solving Webserver Issue
   ansible.builtin.import_playbook: ./apache.yml
-  when: category == "Webserver"
+  when: category == "WebServer"
 
 - name: Solving Database Issue
   ansible.builtin.import_playbook: ./database.yml
