@@ -6,7 +6,7 @@
     - name: Post Work Note on SNOW
       ansible.builtin.import_tasks: "./tasks/snow_post_worknote_tasks.yml"
       vars:
-        post_message: Resolution automation applied successful
+        post_message: Resolution automation applied successful by AAP
 
     - name: Closing the incident on SNOW
       servicenow.itsm.incident:
