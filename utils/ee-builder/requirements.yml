@@ -87,7 +87,7 @@ collections:
   - name: sap.sap_operations
     version: 1.0.4
   - name: servicenow.itsm
-    version: 2.1.0
+    version: 2.6.1
   - name: splunk.es
     version: 3.0.0
   - name: trendmicro.deepsec
