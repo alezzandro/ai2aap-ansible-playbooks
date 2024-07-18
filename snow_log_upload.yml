@@ -28,6 +28,14 @@
       ansible.builtin.shell: "df -h"
       register: storage_result
 
+    - name: Gathering Active Services
+      ansible.builtin.shell: "systemctl list-units --type=service --state=active --no-pager"
+      register: activeservices_result
+
+    - name: Gathering Enabled Services
+      ansible.builtin.shell: "systemctl list-unit-files --state=enabled --type=service --no-pager"
+      register: enabledservices_result
+
     - name: Gathering Web server error.log
       ansible.builtin.shell: "cat /var/log/httpd/error_log"
       register: ws_errorlog_result

@@ -36,6 +36,18 @@
 {% endif %}
 
 
+{% if activeservices_result["cmd"] is defined %}
+## {{ activeservices_result["cmd"] }} output:
+    {{ activeservices_result["stdout"] }}
+{% endif %}
+
+
+{% if enabledservices_result["cmd"] is defined %}
+## {{ enabledservices_result["cmd"] }} output:
+    {{ enabledservices_result["stdout"] }}
+{% endif %}
+
+
 {% if ws_errorlog_result["cmd"] is defined %}
 ## {{ ws_errorlog_result["cmd"] }} output:
     {{ ws_errorlog_result["stdout"] }}
