@@ -1,12 +1,15 @@
 ---
 - name: Post an update on the Work Note section of Service Now Incident
   hosts: localhost
-  servicenow.itsm.incident:
-    instance:
-      host: snow_instance
-      username: snow_user
-      password: snow_pass
-    
-    number: snow_inc_number
-    other:
-      work_notes: post_message
+
+  tasks:
+    - name: Posting the message on SNOW
+      servicenow.itsm.incident:
+        instance:
+          host: snow_instance
+          username: snow_user
+          password: snow_pass
+        
+        number: snow_inc_number
+        other:
+          work_notes: post_message
