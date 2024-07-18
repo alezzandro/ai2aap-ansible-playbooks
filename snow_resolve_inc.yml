@@ -15,9 +15,6 @@
           username: "{{ snow_user }}"
           password: "{{ snow_pass }}"
         number: "{{ snow_inc_number }}"
-        state: closed
-        close_code: "Solved (Permanently)"
-        close_notes: "Resolution automation applied successful"
-        other:
-          resolution_code: "Known error"
-          resolution_notes: "Resolution automation applied successful"
+        state: resolved
+        close_code: "Known error"
+        close_notes: "Resolution automation applied successful by AAP"
