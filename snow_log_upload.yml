@@ -1,0 +1,49 @@
+---
+- name: Upload relevant log files depending on the Server Category
+  hosts: all
+  became: true
+
+  tasks:
+    - name: Let's start with "uname -a"
+      ansible.builtin.shell: "uname -a"
+      register: uname_result
+
+    - name: Gathering cpu load status
+      ansible.builtin.shell: "top | head -n 5"
+      register: cpu_result
+
+    - name: Gathering free memory
+      ansible.builtin.shell: "free -m"
+      register: memory_result
+
+    - name: Gathering Network information
+      ansible.builtin.shell: "ip -a"
+      register: network_result
+
+    - name: Gathering Mount information
+      ansible.builtin.shell: "mount"
+      register: mount_result
+
+    - name: Gathering Storage information
+      ansible.builtin.shell: "df -h"
+      register: storage_result
+
+    - name: Gathering Web server error.log
+      ansible.builtin.shell: "cat /var/log/httpd/error_log"
+      register: ws_errorlog_result
+      when: category == "WebServer"
+
+    - name: Gathering Database log
+      ansible.builtin.shell: "cat /var/log/mysql/mysqld.log"
+      register: db_log_result
+      when: category == "Database"
+
+    - name: Prepare the system log for SNOW
+      ansible.builtin.set_fact:
+        rendered_template: "{{ lookup('template', './templates/system.log.j2') }}"
+
+    - name: Post Work Note on SNOW
+      ansible.builtin.import_tasks: "./tasks/snow_post_worknote_tasks.yml"
+      vars:
+        post_message: "{{ rendered_template }}"
+      

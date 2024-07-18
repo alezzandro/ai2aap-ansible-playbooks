@@ -3,13 +3,7 @@
   hosts: localhost
 
   tasks:
-    - name: Posting the message on SNOW
-      servicenow.itsm.incident:
-        instance:
-          host: "{{ snow_instance }}"
-          username: "{{ snow_user }}"
-          password: "{{ snow_pass }}"
-        
-        number: "{{ snow_inc_number }}"
-        other:
-          work_notes: "{{ post_message }}"
+    - name: Post Work Note on SNOW
+      ansible.builtin.import_tasks: "./tasks/snow_post_worknote_tasks.yml"
+      vars:
+        post_message: "{{ post_message }}"

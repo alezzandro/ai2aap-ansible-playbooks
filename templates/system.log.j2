@@ -1,0 +1,48 @@
+# Ansible gathered log from target system
+
+{% if uname_result is defined %}
+## {{ uname_result.cmd }} output:
+    {{ uname_result.stdout }}
+{% endif %}
+
+
+{% if cpu_result is defined %}
+## {{ cpu_result.cmd }} output:
+    {{ cpu_result.stdout }}
+{% endif %}
+
+
+{% if memory_result is defined %}
+## {{ memory_result.cmd }} output:
+    {{ memory_result.stdout }}
+{% endif %}
+
+
+{% if network_result is defined %}
+## {{ network_result.cmd }} output:
+    {{ network_result.stdout }}
+{% endif %}
+
+
+{% if mount_result is defined %}
+## {{ mount_result.cmd }} output:
+    {{ mount_result.stdout }}
+{% endif %}
+
+
+{% if storage_result is defined %}
+## {{ storage_result.cmd }} output:
+    {{ storage_result.stdout }}
+{% endif %}
+
+
+{% if ws_errorlog_result is defined %}
+## {{ ws_errorlog_result.cmd }} output:
+    {{ ws_errorlog_result.stdout }}
+{% endif %}
+
+
+{% if db_log_result is defined %}
+## {{ db_log_result.cmd }} output:
+    {{ db_log_result.stdout }}
+{% endif %}
