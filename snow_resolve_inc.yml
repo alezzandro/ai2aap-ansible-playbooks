@@ -16,6 +16,5 @@
           password: "{{ snow_pass }}"
         number: "{{ snow_inc_number }}"
         state: resolved
-        other:
-          close_code: "Known error"
-          close_notes: "Resolution automation applied successful by AAP"
+        close_code: "Known error"
+        close_notes: "Resolution automation applied successful by AAP"
