@@ -1,0 +1,20 @@
+---
+- name: Post an update on the Work Note section of Service Now Incident
+  hosts: localhost
+
+  tasks:
+    - name: Post Work Note on SNOW
+      ansible.builtin.import_tasks: "./tasks/snow_post_worknote_tasks.yml"
+      vars:
+        post_message: Resolution automation applied successful
+
+    - name: Closing the incident on SNOW
+      servicenow.itsm.incident:
+        instance:
+          host: "{{ snow_instance }}"
+          username: "{{ snow_user }}"
+          password: "{{ snow_pass }}"
+        number: "{{ snow_inc_number }}"
+        state: closed
+        close_code: "successful"
+        close_notes: "Resolution automation applied successful"

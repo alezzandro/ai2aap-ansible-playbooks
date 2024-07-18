@@ -1,0 +1,19 @@
+---
+- name: Post an update on the Work Note section of Service Now Incident
+  hosts: localhost
+
+  tasks:
+    - name: Post Work Note on SNOW
+      ansible.builtin.import_tasks: "./tasks/snow_post_worknote_tasks.yml"
+      vars:
+        post_message: Resolution automation failed - reassigning the incident for manual intervention
+
+    - name: Reassigning the incident on SNOW
+      servicenow.itsm.incident:
+        instance:
+          host: "{{ snow_instance }}"
+          username: "{{ snow_user }}"
+          password: "{{ snow_pass }}"
+        number: "{{ snow_inc_number }}"
+        other:
+          assigned_to: "26fbff173b331300ad3cc9bb34efc4bd"
