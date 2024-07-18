@@ -1,7 +1,7 @@
 ---
 - name: Upload relevant log files depending on the Server Category
   hosts: all
-  became: true
+  become: true
 
   tasks:
     - name: Let's start with "uname -a"
