@@ -1,0 +1,1298 @@
+{
+     "projects": [
+          {
+               "name": "ai2aap-ansible-playbooks",
+               "description": "",
+               "local_path": "_8__ai2aap_ansible_playbooks",
+               "scm_type": "git",
+               "scm_url": "https://github.com/alezzandro/ai2aap-ansible-playbooks",
+               "scm_branch": "",
+               "scm_refspec": "",
+               "scm_clean": false,
+               "scm_track_submodules": false,
+               "scm_delete_on_update": false,
+               "credential": null,
+               "timeout": 0,
+               "scm_update_on_launch": false,
+               "scm_update_cache_timeout": 0,
+               "allow_override": false,
+               "default_environment": null,
+               "signature_validation_credential": null,
+               "organization": {
+                    "name": "Default",
+                    "type": "organization"
+               },
+               "related": {
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": []
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "ai2aap-ansible-playbooks",
+                    "type": "project"
+               }
+          }
+     ],
+     "job_templates": [
+          {
+               "name": "Issue Resolution",
+               "description": "",
+               "job_type": "run",
+               "playbook": "issue_resolution.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "",
+               "verbosity": 0,
+               "extra_vars": "---\ncategory: \"WebServer\"",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": true,
+               "ask_limit_on_launch": true,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "ask_execution_environment_on_launch": false,
+               "ask_labels_on_launch": false,
+               "ask_forks_on_launch": false,
+               "ask_job_slice_count_on_launch": false,
+               "ask_timeout_on_launch": false,
+               "ask_instance_groups_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": true,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "prevent_instance_group_fallback": false,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "ai2aap-ansible-playbooks",
+                    "type": "project"
+               },
+               "execution_environment": {
+                    "name": "Custom Execution Environment rhel8",
+                    "type": "execution_environment"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credentials",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Issue Resolution",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "Setup Database",
+               "description": "",
+               "job_type": "run",
+               "playbook": "database.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "",
+               "verbosity": 0,
+               "extra_vars": "---",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": true,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "ask_execution_environment_on_launch": false,
+               "ask_labels_on_launch": false,
+               "ask_forks_on_launch": false,
+               "ask_job_slice_count_on_launch": false,
+               "ask_timeout_on_launch": false,
+               "ask_instance_groups_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": true,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "prevent_instance_group_fallback": false,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "ai2aap-ansible-playbooks",
+                    "type": "project"
+               },
+               "execution_environment": {
+                    "name": "Custom Execution Environment rhel8",
+                    "type": "execution_environment"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credentials",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Setup Database",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "Setup Filesystem",
+               "description": "",
+               "job_type": "run",
+               "playbook": "filesystem.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "",
+               "verbosity": 0,
+               "extra_vars": "---",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": true,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "ask_execution_environment_on_launch": false,
+               "ask_labels_on_launch": false,
+               "ask_forks_on_launch": false,
+               "ask_job_slice_count_on_launch": false,
+               "ask_timeout_on_launch": false,
+               "ask_instance_groups_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": true,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "prevent_instance_group_fallback": false,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "ai2aap-ansible-playbooks",
+                    "type": "project"
+               },
+               "execution_environment": {
+                    "name": "Custom Execution Environment rhel8",
+                    "type": "execution_environment"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credentials",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Setup Filesystem",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "Setup Web Server",
+               "description": "Configure the Apache web server",
+               "job_type": "run",
+               "playbook": "apache.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "",
+               "verbosity": 0,
+               "extra_vars": "---",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": true,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "ask_execution_environment_on_launch": false,
+               "ask_labels_on_launch": false,
+               "ask_forks_on_launch": false,
+               "ask_job_slice_count_on_launch": false,
+               "ask_timeout_on_launch": false,
+               "ask_instance_groups_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": true,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "prevent_instance_group_fallback": false,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "ai2aap-ansible-playbooks",
+                    "type": "project"
+               },
+               "execution_environment": {
+                    "name": "Custom Execution Environment rhel8",
+                    "type": "execution_environment"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credentials",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Setup Web Server",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "SNOW - Post System Logs",
+               "description": "",
+               "job_type": "run",
+               "playbook": "snow_log_upload.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "",
+               "verbosity": 0,
+               "extra_vars": "---\ncategory: \"WebServer\"\nsnow_instance: \"https://dev243595.service-now.com\"\nsnow_user: \"AAP.Incident.Manager\"\nsnow_pass: \"tZtPtXKtZX7Vh4m@\"\nsnow_inc_number: \"INC0010034\"",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": true,
+               "ask_limit_on_launch": true,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "ask_execution_environment_on_launch": false,
+               "ask_labels_on_launch": false,
+               "ask_forks_on_launch": false,
+               "ask_job_slice_count_on_launch": false,
+               "ask_timeout_on_launch": false,
+               "ask_instance_groups_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": true,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "prevent_instance_group_fallback": false,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "ai2aap-ansible-playbooks",
+                    "type": "project"
+               },
+               "execution_environment": {
+                    "name": "Custom Execution Environment rhel8",
+                    "type": "execution_environment"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [
+                         {
+                              "organization": {
+                                   "name": "Default",
+                                   "type": "organization"
+                              },
+                              "name": "Workshop Credentials",
+                              "credential_type": {
+                                   "name": "Machine",
+                                   "kind": "ssh",
+                                   "type": "credential_type"
+                              },
+                              "type": "credential"
+                         }
+                    ],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "SNOW - Post System Logs",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "SNOW - Post Work Notes",
+               "description": "",
+               "job_type": "run",
+               "playbook": "snow_post_worknote.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "",
+               "verbosity": 0,
+               "extra_vars": "---\nsnow_instance: \"https://dev243595.service-now.com\"\nsnow_user: \"AAP.Incident.Manager\"\nsnow_pass: \"tZtPtXKtZX7Vh4m@\"\nsnow_inc_number: \"INC0010034\"\npost_message: \"Ansible Automation Platform is working on the issue. Updates will follow.\"",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": true,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "ask_execution_environment_on_launch": false,
+               "ask_labels_on_launch": false,
+               "ask_forks_on_launch": false,
+               "ask_job_slice_count_on_launch": false,
+               "ask_timeout_on_launch": false,
+               "ask_instance_groups_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "prevent_instance_group_fallback": false,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "ai2aap-ansible-playbooks",
+                    "type": "project"
+               },
+               "execution_environment": {
+                    "name": "Custom Execution Environment rhel8",
+                    "type": "execution_environment"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "SNOW - Post Work Notes",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "SNOW - Reassign Incident",
+               "description": "",
+               "job_type": "run",
+               "playbook": "snow_reassign_inc.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "",
+               "verbosity": 0,
+               "extra_vars": "---\nsnow_instance: \"https://dev243595.service-now.com\"\nsnow_user: \"AAP.Incident.Manager\"\nsnow_pass: \"tZtPtXKtZX7Vh4m@\"\nsnow_inc_number: \"INC0010034\"",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "ask_execution_environment_on_launch": false,
+               "ask_labels_on_launch": false,
+               "ask_forks_on_launch": false,
+               "ask_job_slice_count_on_launch": false,
+               "ask_timeout_on_launch": false,
+               "ask_instance_groups_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "prevent_instance_group_fallback": false,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "ai2aap-ansible-playbooks",
+                    "type": "project"
+               },
+               "execution_environment": {
+                    "name": "Custom Execution Environment rhel8",
+                    "type": "execution_environment"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "SNOW - Reassign Incident",
+                    "type": "job_template"
+               }
+          },
+          {
+               "name": "SNOW - Resolve Incident",
+               "description": "",
+               "job_type": "run",
+               "playbook": "snow_resolve_inc.yml",
+               "scm_branch": "",
+               "forks": 0,
+               "limit": "",
+               "verbosity": 0,
+               "extra_vars": "---\nsnow_instance: \"https://dev243595.service-now.com\"\nsnow_user: \"AAP.Incident.Manager\"\nsnow_pass: \"tZtPtXKtZX7Vh4m@\"\nsnow_inc_number: \"INC0010034\"",
+               "job_tags": "",
+               "force_handlers": false,
+               "skip_tags": "",
+               "start_at_task": "",
+               "timeout": 0,
+               "use_fact_cache": false,
+               "host_config_key": "",
+               "ask_scm_branch_on_launch": false,
+               "ask_diff_mode_on_launch": false,
+               "ask_variables_on_launch": false,
+               "ask_limit_on_launch": false,
+               "ask_tags_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_job_type_on_launch": false,
+               "ask_verbosity_on_launch": false,
+               "ask_inventory_on_launch": false,
+               "ask_credential_on_launch": false,
+               "ask_execution_environment_on_launch": false,
+               "ask_labels_on_launch": false,
+               "ask_forks_on_launch": false,
+               "ask_job_slice_count_on_launch": false,
+               "ask_timeout_on_launch": false,
+               "ask_instance_groups_on_launch": false,
+               "survey_enabled": false,
+               "become_enabled": false,
+               "diff_mode": false,
+               "allow_simultaneous": false,
+               "job_slice_count": 1,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "prevent_instance_group_fallback": false,
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "project": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "ai2aap-ansible-playbooks",
+                    "type": "project"
+               },
+               "execution_environment": {
+                    "name": "Custom Execution Environment rhel8",
+                    "type": "execution_environment"
+               },
+               "related": {
+                    "labels": [],
+                    "credentials": [],
+                    "schedules": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "SNOW - Resolve Incident",
+                    "type": "job_template"
+               }
+          }
+     ],
+     "workflow_job_templates": [
+          {
+               "name": "Issue Resolution Workflow",
+               "description": "based on the Category Variable and Host provided in the limit",
+               "extra_vars": "---\nsnow_instance: \"https://dev243595.service-now.com\"\nsnow_user: \"AAP.Incident.Manager\"\nsnow_pass: \"tZtPtXKtZX7Vh4m@\"\nsnow_inc_number: \"INC0010039\"\ncategory: \"Filesystem\"",
+               "survey_enabled": false,
+               "allow_simultaneous": false,
+               "ask_variables_on_launch": true,
+               "limit": null,
+               "scm_branch": null,
+               "ask_inventory_on_launch": false,
+               "ask_scm_branch_on_launch": false,
+               "ask_limit_on_launch": true,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "ask_labels_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_tags_on_launch": false,
+               "skip_tags": null,
+               "job_tags": null,
+               "organization": {
+                    "name": "Default",
+                    "type": "organization"
+               },
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Workshop Inventory",
+                    "type": "inventory"
+               },
+               "related": {
+                    "schedules": [],
+                    "workflow_nodes": [
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "execution_environment": null,
+                              "forks": null,
+                              "job_slice_count": null,
+                              "timeout": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "f13e37a8-8709-468b-bbe5-d85578f7c1ce",
+                              "workflow_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Issue Resolution Workflow",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "SNOW - Post System Logs",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [],
+                                   "failure_nodes": [],
+                                   "always_nodes": [
+                                        {
+                                             "workflow_job_template": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Issue Resolution Workflow",
+                                                  "type": "workflow_job_template"
+                                             },
+                                             "identifier": "69d3d8c6-a3db-43e1-9971-9678c409f96e",
+                                             "type": "workflow_job_template_node"
+                                        }
+                                   ]
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Issue Resolution Workflow",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "f13e37a8-8709-468b-bbe5-d85578f7c1ce",
+                                   "type": "workflow_job_template_node"
+                              }
+                         },
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "execution_environment": null,
+                              "forks": null,
+                              "job_slice_count": null,
+                              "timeout": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "69d3d8c6-a3db-43e1-9971-9678c409f96e",
+                              "workflow_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Issue Resolution Workflow",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Issue Resolution",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [
+                                        {
+                                             "workflow_job_template": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Issue Resolution Workflow",
+                                                  "type": "workflow_job_template"
+                                             },
+                                             "identifier": "8cf884cd-a725-4b8e-9a50-29454fa7e7c5",
+                                             "type": "workflow_job_template_node"
+                                        }
+                                   ],
+                                   "failure_nodes": [
+                                        {
+                                             "workflow_job_template": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Issue Resolution Workflow",
+                                                  "type": "workflow_job_template"
+                                             },
+                                             "identifier": "52d79072-da7a-46ad-b84c-66258943a6eb",
+                                             "type": "workflow_job_template_node"
+                                        }
+                                   ],
+                                   "always_nodes": []
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Issue Resolution Workflow",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "69d3d8c6-a3db-43e1-9971-9678c409f96e",
+                                   "type": "workflow_job_template_node"
+                              }
+                         },
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "execution_environment": null,
+                              "forks": null,
+                              "job_slice_count": null,
+                              "timeout": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "8cf884cd-a725-4b8e-9a50-29454fa7e7c5",
+                              "workflow_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Issue Resolution Workflow",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "SNOW - Post System Logs",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [],
+                                   "failure_nodes": [],
+                                   "always_nodes": [
+                                        {
+                                             "workflow_job_template": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Issue Resolution Workflow",
+                                                  "type": "workflow_job_template"
+                                             },
+                                             "identifier": "a14e12c7-b6ae-4176-9d8f-f27c972527f1",
+                                             "type": "workflow_job_template_node"
+                                        }
+                                   ]
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Issue Resolution Workflow",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "8cf884cd-a725-4b8e-9a50-29454fa7e7c5",
+                                   "type": "workflow_job_template_node"
+                              }
+                         },
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "execution_environment": null,
+                              "forks": null,
+                              "job_slice_count": null,
+                              "timeout": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "a14e12c7-b6ae-4176-9d8f-f27c972527f1",
+                              "workflow_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Issue Resolution Workflow",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "SNOW - Resolve Incident",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [],
+                                   "failure_nodes": [],
+                                   "always_nodes": []
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Issue Resolution Workflow",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "a14e12c7-b6ae-4176-9d8f-f27c972527f1",
+                                   "type": "workflow_job_template_node"
+                              }
+                         },
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "execution_environment": null,
+                              "forks": null,
+                              "job_slice_count": null,
+                              "timeout": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "2eab43c4-4738-4a10-bf3c-e2d882dcf9e6",
+                              "workflow_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Issue Resolution Workflow",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "SNOW - Post Work Notes",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [],
+                                   "failure_nodes": [],
+                                   "always_nodes": [
+                                        {
+                                             "workflow_job_template": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Issue Resolution Workflow",
+                                                  "type": "workflow_job_template"
+                                             },
+                                             "identifier": "f13e37a8-8709-468b-bbe5-d85578f7c1ce",
+                                             "type": "workflow_job_template_node"
+                                        }
+                                   ]
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Issue Resolution Workflow",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "2eab43c4-4738-4a10-bf3c-e2d882dcf9e6",
+                                   "type": "workflow_job_template_node"
+                              }
+                         },
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "execution_environment": null,
+                              "forks": null,
+                              "job_slice_count": null,
+                              "timeout": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "52d79072-da7a-46ad-b84c-66258943a6eb",
+                              "workflow_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Issue Resolution Workflow",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "SNOW - Reassign Incident",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [],
+                                   "failure_nodes": [],
+                                   "always_nodes": []
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Issue Resolution Workflow",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "52d79072-da7a-46ad-b84c-66258943a6eb",
+                                   "type": "workflow_job_template_node"
+                              }
+                         }
+                    ],
+                    "labels": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "notification_templates_approvals": [],
+                    "survey_spec": {
+                         "name": "",
+                         "spec": [
+                              {
+                                   "max": 1024,
+                                   "min": 0,
+                                   "type": "text",
+                                   "choices": "",
+                                   "default": "",
+                                   "required": true,
+                                   "variable": "snow_instance",
+                                   "new_question": true,
+                                   "question_name": "Please insert the SNOW instance address",
+                                   "question_description": ""
+                              },
+                              {
+                                   "max": 1024,
+                                   "min": 0,
+                                   "type": "text",
+                                   "choices": "",
+                                   "default": "",
+                                   "required": true,
+                                   "variable": "snow_user",
+                                   "new_question": true,
+                                   "question_name": "Please insert the SNOW username",
+                                   "question_description": ""
+                              },
+                              {
+                                   "max": 1024,
+                                   "min": 0,
+                                   "type": "password",
+                                   "choices": "",
+                                   "default": "",
+                                   "required": true,
+                                   "variable": "snow_pass",
+                                   "new_question": true,
+                                   "question_name": "Please insert the SNOW password",
+                                   "question_description": ""
+                              },
+                              {
+                                   "max": 1024,
+                                   "min": 0,
+                                   "type": "text",
+                                   "choices": "",
+                                   "default": "",
+                                   "required": true,
+                                   "variable": "snow_inc_number",
+                                   "new_question": true,
+                                   "question_name": "Please insert the SNOW incident number",
+                                   "question_description": ""
+                              },
+                              {
+                                   "max": 1024,
+                                   "min": 0,
+                                   "type": "text",
+                                   "choices": "",
+                                   "default": "",
+                                   "required": true,
+                                   "variable": "category",
+                                   "new_question": true,
+                                   "question_name": "Please select the Issue Category",
+                                   "question_description": ""
+                              }
+                         ],
+                         "description": ""
+                    }
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Issue Resolution Workflow",
+                    "type": "workflow_job_template"
+               }
+          }
+     ],
+     "execution_environments": [
+          {
+               "name": "Custom Execution Environment rhel8",
+               "description": "",
+               "organization": null,
+               "image": "quay.io/ai2aap/ai2aap-ee-custom-rhel8:20240718",
+               "pull": "",
+               "credential": {
+                    "organization": null,
+                    "name": "Default Execution Environment Registry Credential",
+                    "credential_type": {
+                         "name": "Container Registry",
+                         "kind": "registry",
+                         "type": "credential_type"
+                    },
+                    "type": "credential"
+               },
+               "natural_key": {
+                    "name": "Custom Execution Environment rhel8",
+                    "type": "execution_environment"
+               }
+          },
+          {
+               "name": "Default execution environment",
+               "description": "",
+               "organization": null,
+               "image": "registry.redhat.io/ansible-automation-platform-24/ee-supported-rhel8:latest",
+               "pull": "",
+               "credential": {
+                    "organization": null,
+                    "name": "Default Execution Environment Registry Credential",
+                    "credential_type": {
+                         "name": "Container Registry",
+                         "kind": "registry",
+                         "type": "credential_type"
+                    },
+                    "type": "credential"
+               },
+               "natural_key": {
+                    "name": "Default execution environment",
+                    "type": "execution_environment"
+               }
+          },
+          {
+               "name": "Minimal execution environment",
+               "description": "",
+               "organization": null,
+               "image": "registry.redhat.io/ansible-automation-platform-24/ee-minimal-rhel8:latest",
+               "pull": "",
+               "credential": {
+                    "organization": null,
+                    "name": "Default Execution Environment Registry Credential",
+                    "credential_type": {
+                         "name": "Container Registry",
+                         "kind": "registry",
+                         "type": "credential_type"
+                    },
+                    "type": "credential"
+               },
+               "natural_key": {
+                    "name": "Minimal execution environment",
+                    "type": "execution_environment"
+               }
+          }
+     ]
+}
